@@ -1,5 +1,6 @@
 from typing import TypeVar
 from datetime import datetime
+from functools import lru_cache 
 
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session
 from sqlalchemy import String, create_engine, DateTime, select, asc
@@ -23,6 +24,7 @@ class UserModel(Base):
     downloaded_at: Mapped[DateTime] = mapped_column(DateTime, default=datetime.now)
 
 
+@lru_cache(maxsize=4)
 def read():
     """Function for CLI mode to show status of downloads"""
     with Session(engine) as session:

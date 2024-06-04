@@ -90,8 +90,6 @@ class _Video_Music_Downloader:
         self.url = url
         self.quality = quality
         self.status_bar = status_bar
-        # 'https://files.musicfeed.ir/dir/2020/9/Don%20Omar%20Dale%20Dale%20Don%20Dale%20128.mp3'
-        # عددا پشت سر هم شاید بیان پس باید جوری رجکس رو بنویسی که فقط کیفیت رو بکشه بیرون
         self.match_quality = re.findall(
             r"128|320|144|240|360|480|720|1080", self.url, flags=re.MULTILINE
         )
@@ -102,8 +100,6 @@ class _Video_Music_Downloader:
             any(map(lambda x: x.value == self.quality, tuple(Qualities)))
             and str(self.quality) in self.match_quality
         ) or (not self.match_quality):
-            # https://dl.musicdel.ir/Music/1400/04/don_omar_dale_dale.mp3
-            # توی آدرسی مثل همین کیفیت اضن توش نیست که با ریجکس در بیاد اما ادرس درسته پس دانلود باید شروع بشه
             async with aiohttp.ClientSession() as session:
                 async with session.get(self.url) as res:
                     if res.status == 200 and res.content_length:
