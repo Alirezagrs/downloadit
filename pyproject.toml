@@ -1,0 +1,18 @@
+[project]
+name = "aiodownloader"
+version = "1.0.0"
+authors = [
+  { name="Alireza Garousi", email="alireza7948@gmail.com" },
+]
+description = "An asynchronous library to download."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Documentation = "https://github.com/Alirezagrs"
+Repository = "https://github.com/Alirezagrs/aiodownloader"
