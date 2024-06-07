@@ -13,6 +13,19 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+dependencies = [
+    "aiohttp==3.9.5",
+    "aiofiles==23.2.1",
+    "alembic==1.13.1",
+    "SQLAlchemy==2.0.30",
+    "tqdm==4.66.4",
+]
+
+[project.optional-dependencies]
+test = [
+    "black==24.4.2",
+    
+]
 
 [project.urls]
 Documentation = "https://github.com/Alirezagrs"
