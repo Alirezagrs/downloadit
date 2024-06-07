@@ -1,5 +1,5 @@
 [project]
-name = "aiodownloader"
+name = "aio-downloadit"
 version = "1.0.0"
 authors = [
   { name="Alireza Garousi", email="alireza7948@gmail.com" },
@@ -29,4 +29,4 @@ test = [
 
 [project.urls]
 Documentation = "https://github.com/Alirezagrs"
-Repository = "https://github.com/Alirezagrs/aiodownloader"
+Repository = "https://github.com/Alirezagrs/aio-downloadit"
