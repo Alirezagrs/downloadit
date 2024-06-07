@@ -104,8 +104,7 @@ class _Video_Music_Downloader:
                 async with session.get(self.url) as res:
                     if res.status == 200 and res.content_length:
                         logger.info(
-                            f"the media with size of {res.content_length} \
-                                  bytes is about to download..."
+                            f"the media with size of {res.content_length} bytes is about to download..."
                         )
 
                         async with aiofiles.open(
@@ -157,18 +156,14 @@ class _Video_Music_Downloader:
                                 session.add(insert)
                                 session.commit()
 
-                            logger.info(
-                                "the media has been\
-                                         successfully downloaded..."
-                            )
+                            logger.info("the media has been successfully downloaded...")
 
                     else:
                         logger.error("the link does not exist...")
                         raise UnAvailableLinkError
         else:
             logger.error(
-                "The quality is not available or \
-                      does not match with the quality of url link"
+                "The quality is not available or does not match with the quality of url link"
             )
             raise QualityError
 
@@ -184,8 +179,7 @@ class _PhotoDownloader:
             async with session.get(self.url) as res:
                 if res.status == 200 and res.content_length:
                     logger.info(
-                        f"the media with size of {res.content_length}b \
-                              is about to download..."
+                        f"the media with size of {res.content_length}b is about to download..."
                     )
                     async with aiofiles.open(
                         os.path.join(BASE_DIR, str(res.url.name)), "wb"
@@ -208,8 +202,7 @@ async def _send_requests(session: aiohttp.ClientSession, url: HttpUrl) -> Binary
             os.path.join(BASE_DIR, str(res.url.name)), "wb"
         ) as file:
             logger.info(
-                f"the file with the size\
-                      {res.content_length}b is about to download..."
+                f"the file with the size {res.content_length}b is about to download..."
             )
             async for data in res.content.iter_chunked(CHUNK_SIZE):
                 await file.write(data)

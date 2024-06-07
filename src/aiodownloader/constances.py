@@ -2,7 +2,7 @@ import enum
 from pathlib import Path
 from typing import Final, final
 
-BASE_DIR: Final = Path(__file__).parent.parent
+BASE_DIR: Final = Path(__file__).parent.parent.parent
 CHUNK_SIZE: Final = 3065
 
 
