@@ -71,7 +71,7 @@ async def main():
 asyncio.run(main())
 ```
 ### output sample of download a video.
-![image info](./exm.png)
+![image info](./exmp.png)
 
 ## Extra
 
@@ -91,3 +91,5 @@ from aiodownloder.models.app_model import read
 read()
 
 ```
+### out put :
+![image info](./exmpp.png)
