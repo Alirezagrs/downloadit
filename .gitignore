@@ -224,7 +224,5 @@ pip-selfcheck.json
 .ionide
 main.py
 app.db
-migrations
-alembic.ini
 
 # End of https://www.toptal.com/developers/gitignore/api/venv,python,visualstudiocode,virtualenv,git

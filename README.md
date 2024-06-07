@@ -84,11 +84,10 @@ print(BASE_DIR)
 # you can change it by editing BASE_DIR from source code
 
 ```
+### if you want to know about your download status:
+```python
+from aiodownloder.models.app_model import read
 
-## Cli
+read()
 
-### if you want to know about your  downloas status:
-
-    python cli.py --show-status
-
-### Example:
+```
