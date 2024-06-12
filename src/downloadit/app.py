@@ -18,16 +18,16 @@ import aiofiles
 from tqdm.asyncio import tqdm_asyncio
 from sqlalchemy.orm import Session
 
-from aio_downloadit.logs import logger
-from aio_downloadit.constances import (
+from downloadit.logs import logger
+from downloadit.constances import (
     BASE_DIR,
     CHUNK_SIZE,
     Qualities,
     VideoFormats,
     PhotoFormats,
 )
-from aio_downloadit.exceptions import QualityError, UnAvailableLinkError
-from aio_downloadit.models.app_model import UserModel, engine
+from downloadit.exceptions import QualityError, UnAvailableLinkError
+from downloadit.models.app_model import UserModel, engine
 
 HttpUrl = NewType("HttpUrl", str)
 Session_ = Annotated[aiohttp.ClientSession, "an object of client-session type"]

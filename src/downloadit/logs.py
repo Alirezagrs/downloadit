@@ -2,7 +2,7 @@
 
 import logging
 
-logger = logging.getLogger("aio_downloadit")
+logger = logging.getLogger("downloadit")
 
 s_formater = logging.Formatter(
     "[%(levelname)s]: occured at %(asctime)s in %(name)s => %(message)s"

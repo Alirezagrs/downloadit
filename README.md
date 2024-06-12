@@ -1,18 +1,18 @@
-# aio_downloadit
+# downloadit
 
 ### An async library to download videos, photos, musics and files.
 
 - ### Easy to use and fast to download.
 
-- ### Github repository: https://github.com/Alirezagrs/aio_downloadit
+- ### Github repository: https://github.com/Alirezagrs/downloadit
 
 
 # Getting Started
 
-### To Install aio_downloadit, simply do
-    pip install aio_downloadit
+### To Install downloadit, simply do
+    pip install downloadit
 
-### because of aio_downloadit has a light sqlite server besides, the next step is:
+### because of downloadit has a light sqlite server besides, the next step is:
     alembic init migrations
 ___
 ```go to alembic.ini```
@@ -23,7 +23,7 @@ ___
 
 ```go to migrations/env.py```
 ```python
-from aio_downloadit.models.app_model import Base 
+from downloadit.models.app_model import Base 
 
 target_metadata = Base.metadata
 ```
@@ -32,13 +32,13 @@ ___
     alembic revision --autogenerate
     alembic upgrade head
 
-### Now enjoy aio_downloadit ;) 
+### Now enjoy downloadit ;) 
 # Examples
 
 ```python
 import asyncio
 
-from aio_downloadit import Download, 
+from downloadit import Download, 
 download_multi_media
 
 async def main():
@@ -78,7 +78,7 @@ asyncio.run(main())
 ### if you want to know where your downloads location is in your system:
 
 ```python
-from aio_downloadit.constances import BASE_DIR
+from downloadit.constances import BASE_DIR
 print(BASE_DIR)
 
 # you can change it by editing BASE_DIR from source code
@@ -86,7 +86,7 @@ print(BASE_DIR)
 ```
 ### if you want to know about your download status:
 ```python
-from aiodownloder.models.app_model import read
+from downloadit.models.app_model import read
 
 read()
 
